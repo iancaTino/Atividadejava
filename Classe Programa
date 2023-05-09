@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Programa {
+
+    public static void main(String[] args) {
+        ArrayList funcionarios = new ArrayList();
+
+        Scanner sc = new Scanner(System.in);
+
+        Gerente gerente = new Gerente(7000, "Maria");
+        Programador programador = new Programador(3000, "joão");
+
+        int opcao;
+        do {
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Imprimir dados do Gerente");
+            System.out.println("2 - Imprimir dados do Programador");
+            System.out.println("3 - Aumentar salário do Gerente");
+            System.out.println("4 - Aumentar salário do Programador");
+            System.out.println("0 - Sair");
+
+            opcao = sc.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Dados do Gerente:");
+                    System.out.println("Salario: R$" + gerente.getSalario());
+                    break;
+                case 2:
+                    System.out.println("Dados do programador");
+                    System.out.println("Salario: R$" + programador.getSalario());
+                    break;
+                case 3:
+                    gerente.aumentaSalario();
+                    System.out.println("Salario do Gerente aumentado em 10%.");
+                    break;
+                case 4:
+                    programador.aumentaSalario();
+                    System.out.println("Salario do programador aumentado em 20%.");
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
+            }
+        } while (opcao != 0);
+    }
+}
