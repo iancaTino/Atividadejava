@@ -1,0 +1,11 @@
+classe Programadorpublic class Programador extends Funcionario{
+
+    public Programador(double salario, String nome){
+        super(nome, salario);
+    }
+    public void aumentaSalario(){
+        setSalario(getSalario() * 1.2f);
+
+    }
+
+}
