@@ -46,6 +46,7 @@ public class Programa {
                     System.out.println("Opção inválida!");
                     break;
             }
-        } while (opcao != 0);
+        } 
+        while (opcao != 0);
     }
 }
