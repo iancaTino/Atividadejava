@@ -7,5 +7,4 @@ classe Programadorpublic class Programador extends Funcionario{
         setSalario(getSalario() * 1.2f);
 
     }
-
 }
